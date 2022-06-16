@@ -1,0 +1,43 @@
+<h1>Painel de Controle</h1>
+<div class="recent-orders">
+    <div class="pagina1">
+        <h2>Equipamentos Cadastrados</h2>
+        <h3></h3>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>ID</th>
+                <th>Sala</th>
+                <th>Nome</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Tipo</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for e in equipamentos %}
+            <tr>
+                <td><a class="primary" href="/equipamento/form?op=visual&id={{e.id_equipamento}}">Visual</a></td>
+                <td>{{e.id_equipamento}}</td>
+                <td>{{e.id_sala}}</td>
+                <td>{{e.nome}}</td>
+                <td>{{e.marca}}</td>
+                <td>{{e.modelo}}</td>
+                <td>{{e.tipo}}</td>
+                <td><a class="warning" href="/equipamento/form?op=altera&id={{e.id_equipamento}}">Alterar</a></td>
+                <td><a class="danger" href="/equipamento/recebePost?op=deleta&id={{e.id_equipamento}}" onclick="return confirm('Tem certeza deseja excluir? Essa operação é irreversível')">Excluir</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagina">
+        <h3><span class="material-icons-sharp" id="voltar"></span>     <span class="material-icons-sharp" id="proximo"></span></h3>
+    </div>
+    <a href="/equipamento/form?op=inclui" class="link">
+        <div class="cadastrar">Cadastrar novo equipamento</div>
+    </a>
+</div>

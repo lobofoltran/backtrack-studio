@@ -1,0 +1,37 @@
+<h1>Painel de Controle</h1>
+<form action="/equipamento/recebePost?op={{op}}" method="POST">
+    {% if op == 'inclui' %}
+    <h2>Cadastro de Equipamento</h2>
+    {% elseif op == 'altera' %}
+    <h2>Edição de Equipamento</h2>
+    {% else %}
+    <h2>Visualização de Equipamento</h2>
+    {% endif %}
+    <div class="inputs">
+        {% if op != 'inclui' %}
+        <p>ID:</p>
+        <input type="text" placeholder="ID" name="id_equipamento" value="{{equipamento.id_equipamento}}" readonly required>
+        {% endif %}
+        <p>Sala:</p>
+        <select placeholder="Sala" id="id_sala" name="id_sala" class="{{equipamento.id_sala}}" value="value" required>
+            <option value="" selected disabled>Selecione</option>
+            {% for s in sala %}
+            <option value="{{s.id_sala}}">{{s.id_sala}}</option>
+            {% endfor %}
+        </select>
+        <p>Nome do equipamento:</p>
+        <input type="text" placeholder="Nome do equipamento" name="nome" value="{{equipamento.nome}}" required>
+        <p>Marca do equipamento:</p>
+        <input type="text" placeholder="Marca do equipamento" name="marca" value="{{equipamento.marca}}" required>
+        <p>Modelo do equipamento:</p>
+        <input type="text" placeholder="Modelo do equipamento" name="modelo" value="{{equipamento.modelo}}" required>
+        <p>Tipo do equipamento:</p>
+        <input type="text" placeholder="Tipo do equipamento" name="tipo" value="{{equipamento.tipo}}" required>
+    </div>
+    {% if op == 'altera' %}
+    <a id="excluirCliente" class="danger" href="/cliente/recebePost?op=deleta&id={{cliente.id_cliente}}" onclick="return confirm('Tem certeza deseja excluir? Essa operação é irreversível')">Excluir Equipamento</a>
+    {% endif %}
+    {% if op != 'visual' %}
+    <button type="submit">Confirmar</button>
+    {% endif %}
+</form>

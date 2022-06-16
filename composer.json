@@ -1,0 +1,23 @@
+{
+    "name": "lobofoltran/backtrack-studio",
+    "description": "Backtrack Studio - HTML, CSS, JS & PHP.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gustavo Lobo",
+            "email": "gustavoqe.75@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\" : "core/",
+            "App\\" : "application/"
+        }
+    },
+    "require": {
+        "twig/twig": "^3.0",
+        "php": ">= 7.0",
+        "dompdf/dompdf": "^0.8"
+    }
+}

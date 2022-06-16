@@ -1,0 +1,19 @@
+<h1>Painel de Controle</h1>
+<form>
+    <h2>Geração de gráficos</h2>
+    <div class="inputs">
+        <p>Selecione uma opção:</p>
+        <select name="grafico" id="grafico" onchange="opcoesGrafico()" required>
+            <option value="" selected disabled>Selecione</option>
+            <option value="1">Selecionar um dia específico</option>
+            <option value="2">Selecionar um mês (gráfico semanal)</option>
+            <option value="3">Selecionar um ano (gráfico mensal)</option>
+            <option value="4">Selecionar um período de datas</option>
+            <option value="5">Gráfico anual (desde o início)</option>
+        </select>
+        <div id="divOpcoes"></div>
+        <button type="submit">Confirmar</button>
+    </div>
+</form>
+
+<script src="/assets/js/dashboard-graficos.js"></script>

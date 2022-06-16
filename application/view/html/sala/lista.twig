@@ -1,0 +1,41 @@
+<h1>Painel de Controle</h1>
+<div class="recent-orders">
+    <div class="pagina1">
+        <h2>Salas Cadastradas</h2>
+        <h3></h3>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Sala</th>
+                <th>Equipamentos</th>
+                <th>Horários disponíveis</th>
+                <th class="cel-no">Valor/Ensaio</th>
+                <th class="cel-no">Valor/Gravação</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in salas %}
+            <tr>
+                <td><a class="primary" href="/sala/form?op=visual&id={{s.id_sala}}">Visual</a></td>
+                <td>{{s.id_sala}}</td>
+                <td class="primary"><a class="primary" href="/sala/equipamentos?id={{s.id_sala}}">Ver</a></td>
+                <td>{{s.horario_disp1}} / {{s.horario_disp2}} / {{s.horario_disp3}}</td>
+                <td class="cel-no">R$ {{s.valor_ensaio}},00</td>
+                <td class="cel-no">R$ {{s.valor_gravacao}},00</td>
+                <td><a class="warning" href="/sala/form?op=altera&id={{s.id_sala}}">Alterar</a></td>
+                <td><a class="danger" href="/sala/recebePost?op=deleta&id={{s.id_sala}}" onclick="return confirm('Tem certeza deseja excluir? Essa operação é irreversível')">Excluir</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagina">
+        <h3><span class="material-icons-sharp" id="voltar"></span>     <span class="material-icons-sharp" id="proximo"></span></h3>
+    </div>
+    <a href="/sala/form?op=inclui" class="link">
+        <div class="cadastrar">Cadastrar nova sala</div>
+    </a>
+</div>

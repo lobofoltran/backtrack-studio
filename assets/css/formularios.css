@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+fieldset {
+    padding: 40px;
+
+}
+
+form{
+    display: inline-block;
+    position: relative;
+    left: 30%; 
+}
+form label {
+    font-family:impact;
+    font-size:20pt;
+    color:#fff;
+}
+
+form input {
+    background-color:#f2f2f2;
+    border:1px solid #000;
+    padding:6px;
+}
+
+input[type=text]{     
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    background: #cccccc; 
+    border:1px solid #000000;
+    width:150px
+    text-align: center;
+}
+
+input[type=password]{     
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    background: #cccccc; 
+    border:1px solid #000000;
+    width:150px
+    text-align: center;
+}
+td{
+    
+
+}
+
+.botaoForm {
+    padding:10px;
+    background-color:#999;
+    border:1px solid #000;
+    color:#fff;
+    font-weight:bold;
+}
+
+.botaoForm:hover {
+    padding:10px;
+    background-color:#000;
+    border:1px solid #fff;
+    color:#fff;
+    font-weight:bold;
+}
+
+
+
+
+

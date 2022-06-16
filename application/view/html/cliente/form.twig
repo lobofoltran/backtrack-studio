@@ -1,0 +1,86 @@
+<h1>Painel de Controle</h1>
+<form action="/cliente/recebePost?op={{op}}" method="POST">
+    {% if op == 'inclui' %}
+    <h2>Cadastro de Cliente</h2>
+    {% elseif op == 'altera' %}
+    <h2>Edição de Cliente</h2>
+    {% else %}
+    <h2>Visualização de Cliente</h2>
+    {% endif %}
+    <div class="inputs">
+        <h3>Informações do Cliente</h3>
+        {% if op != 'inclui' %}
+        <p>ID</p>
+        <input type="text" placeholder="ID" name="id_cliente" value="{{cliente.id_cliente}}" readonly required>
+        {% endif %}
+        <p>Nome</p>
+        <input type="text" placeholder="Nome" name="nome" value="{{cliente.nome}}" required>
+        <p>RG</p>
+        <input type="text" placeholder="RG" name="rg" value="{{cliente.rg}}" required>
+        <p>CPF</p>
+        <input type="text" placeholder="CPF" name="cpf" value="{{cliente.cpf}}" required>
+        <p>Data de Nascimento</p>
+        <input type="date" placeholder="Data de Nascimento" name="dataNasc" value="{{cliente.dataNasc}}" required>
+        <p>Endereço de e-mail</p>
+        <input type="email" placeholder="E-mail" name="email" value="{{cliente.email}}" required>
+        <h3>Informações de Endereço</h3>
+        <p>CEP</p>
+        <input type="text" placeholder="CEP" name="cep" id="cep" value="{{cliente.cep}}" required>
+        <p>Rua</p>
+        <input type="text" placeholder="Rua" name="rua" id="logradouro" value="{{cliente.rua}}" readonly required>
+        <p>Número</p>
+        <input type="number" placeholder="Número" name="numero" id="numero" value="{{cliente.numero}}" required>
+        <p>Bairro</p>
+        <input type="text" placeholder="Bairro" name="bairro" id="bairro" value="{{cliente.bairro}}" readonly required>
+        <p>Cidade</p>
+        <input type="text" placeholder="Cidade" name="cidade" id="cidade" value="{{cliente.cidade}}" readonly required>
+        <p>Estado</p>
+        <select id="uf" name="uf" value="{{cliente.uf}}" class="" readonly required>
+            <option value="" selected disabled>Selecione</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>  
+        </select>
+        <h3>Senha e Segurança</h3>
+        <p>Nova senha</p>
+        <input type="password" placeholder="Nova senha" name="senha" id="senha" value="">
+        <p>Cargo</p>
+        <select id="admin" name="cargo" value="value" class="{{cliente.admin}}" required>
+            <option value="" selected disabled>Selecione</option>
+            <option value="0">Usuário</option>
+            <option value="1">Admin</option>  
+        </select>
+    </div>
+    {% if op == 'altera' %}
+    <a id="excluirCliente" class="danger" href="/cliente/recebePost?op=deleta&id={{cliente.id_cliente}}" onclick="return confirm('Tem certeza deseja excluir? Essa operação é irreversível')">Excluir Cliente</a>
+    {% endif %}
+    {% if op != 'visual' %}
+    <button type="submit">Confirmar</button>
+    {% endif %}
+</form>
+
+<script src="/assets/js/dashboard-clientes.js"></script>

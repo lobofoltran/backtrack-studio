@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BACKTRACK - Início</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+  <!-- ICONSCOUT CDN -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+  <!-- GOOGLE FONTS (MONTSERRAT) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"> 
+
+  <!-- SWIPER JS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    body {
+      background-image: url(assets/img/bg-texture.png);
+    }
+  </style>
+  
+</head>
+<body>
+  <nav>
+    <div class="container nav__container">
+        <a href="/inicio"><h4>BACKTRACK</h4></a>
+        <ul class="nav__menu">
+            <li><a href="/inicio">Início</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+            <li><a href="/cursos">Cursos</a></li>
+            <li><a href="/contato">Contato</a></li>
+            <li><a href="/login">Painel</a></li>
+        </ul>
+        <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+    </div>
+  </nav>
+  <!-- =========== END OF NAVBAR ========== -->
+  <header>
+    <div class="container header__container">
+      <div class="header__left">
+          <h1>BACKTRACK, a sua melhor experiência musical!</h1>
+          <p></p>
+          <a href="/contato" class="btn btn-primary">
+            Agende seu horário
+          </a>
+      </div>
+      <div class="header__right">
+        <div class="header__right-image">
+          <img src="assets/img/logo.png" alt="">
+        </div>
+      </div>
+    </div>
+  </header>
+    <!-- =========== END OF HEADER ========== -->
+  <section class="categories">
+    <div class="container categories__container">
+      <div class="categories__left">
+        <h1>Nossos serviços</h1>
+        <p>O BACKTRACK se consolidou no mercado e já somos referência em produção musical. Contamos com um time de profissionais experientes e criativos, oferecendo excelência e versatilidade nos arranjos, produção, gravação, mixagem e masterização.</p>
+        <a href="/sobre" class="btn">Saiba mais</a>
+      </div>
+      <div class="categories__right">
+        <article class="category">
+          <span class="category__icon"><i class="uil uil-headphones"></i></span>
+          <h5>Gravação para bandas</h5>
+          <p>Disponibilizamos salas para sua banda gravar as melhores músicas, tendo a melhor experiência possível.</p>
+        </article>
+
+        <article class="category">
+          <span class="category__icon"><i class="uil uil-music-note"></i></span>
+          <h5>Ensaios musicais</h5>
+          <p>Temos estúdios preparados para receber toda a sua banda para a realização de ensaios musicais.</p>
+        </article>
+
+        <article class="category">
+          <span class="category__icon"><i class="uil uil-microphone"></i></span>
+          <h5>Podcasts</h5>
+          <p>Se você é fã de Podcasts, poderá usufruir também de nossos espaços destinados exclusivamente para Podcasts.</p>
+        </article>
+
+        <article class="category">
+          <span class="category__icon"><i class="uil uil-rainbow"></i></i></span>
+          <h5>Salas de Baterias</h5>
+          <p>Disponibilizamos salas de baterias para sua banda ter uma experiência única.</p>
+        </article>
+
+        <article class="category">
+          <span class="category__icon"><i class="uil uil-music"></i></i></span>
+          <h5>Serviços de Áudio</h5>
+          <p>Nossos serviços de áudio são únicos e profissionais, destinados para quem deseja uma experiência perfeita.</p>
+        </article>
+
+        <article class="category">
+          <span class="category__icon"><i class="uil uil-megaphone"></i></span>
+          <h5>Canto</h5>
+          <p>Temos também salas de canto com uma acústica de ótima qualidade, perfeita para sua banda.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+      <!-- =========== END OF CATEGORIES ========== -->
+      <section class="courses">
+        <h2>Alguns de nossos estúdios</h2>
+        <div class="container courses__container">
+          <article class="course">
+            <div class="course__image">
+              <img src="assets/img/bateria.jpeg" alt="">
+            </div>
+            <div class="course__info">
+              <h4>Estúdio de Bateria</h4>
+              <p>
+                Estúdio voltado para a prática de bateria, com instrumentos novos e de primeira qualidade.
+              </p>
+              <a href="/contato" class="btn btn-primary">Saiba mais</a>
+            </div>
+          </article>
+
+          <article class="course">
+            <div class="course__image">
+              <img src="assets/img/guitarra.jpeg" alt="">
+            </div>
+           <div class="course__info">
+            <h4>Estúdio de Guitarra</h4>
+            <p>
+              Estúdio voltado para a prática de guitarra, com instrumentos essenciais para sua música.
+            </p>
+            <a href="/contato" class="btn btn-primary">Saiba mais</a>
+           </div>
+          </article>
+
+          <article class="course">
+            <div class="course__image">
+              <img src="assets/img/template2.jpg" alt="">
+            </div>
+          <div class="course__info">
+            <h4>Estúdio de Canto</h4>
+            <p>
+              Estúdio voltado para a prática de canto, com um espaço e acústica excepcional como sua banda merece.
+            </p>
+            <a href="/contato" class="btn btn-primary">Saiba mais</a>
+          </div>
+          </article>
+        </div>
+      </section>
+       <!-- =========== END OF COURSES ========== -->
+      <section class="faqs">
+        <h2>Perguntas frequentes</h2>
+        <div class="container faqs__container">
+          <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+              <h4>Como funciona o BACKTRACK?</h4>
+              <p>
+                O BACKTRACK é um estúdio musical, onde você e ou sua banda podem reservar salas, adquirir cursos, praticar, ensaiar e gravar suas músicas.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+              <h4>Como se cadastrar?</h4>
+              <p>
+                O cadastro pode ser feito aqui mesmo no site na aba contato, entrando em contato com a nossa equipe via email e deixando sua mensagem sobre o que você deseja, ou também pode entrar em contato via telefone.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+              <h4>Posso fazer uma aula experimental?</h4>
+              <p>
+                Sim, liberamos até duas aulas experimentais em nossos cursos, e caso você já seja cliente se chamar um amigo para fazer o curso, você ganha 15% de desconto na mensalidade.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+              <h4>Como agendar um horário?</h4>
+              <p>
+                O agendamento de horário pode ser feito aqui mesmo no site na aba contato, entrando em contato com a nossa equipe via email e informando o horário que deseja, ou também pode entrar em contato via telefone.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+              <h4>Os profissionais são experientes?</h4>
+              <p>
+                Sim, nossos profissionais possuem uma série de certificados e treinamentos na área musical e possuem uma vasta experiência no ramo.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+              <h4>Quais equipamentos poderei utilizar?</h4>
+              <p>
+                Isso vai depender da sala que você deseja reservar, damos todo o apoio na escolha da sala e informamos previamente quais instrumentos você e sua banda poderão utilizar.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+              <h4>Como eu sei qual curso é ideal para mim?</h4>
+              <p>
+                Caso ainda esteja em dúvida em qual sala ou curso escolher, contamos com uma equipe de profissionais altamente qualificados e experientes que orientarão você e sua equipe para a escolha certa de seu curso ou sala.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+              <h4>Vale a pena o investimento?</h4>
+              <p>
+                Nossos ambientes e profissionais são de ótima qualidade, pode ter certeza que valerá a pena o investimento com nossos serviços.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- =========== END OF FAQs ========== -->
+      <section class="container testimonials__container swiper mySwiper">
+        <h2>Depoimentos de Clientes</h2>
+        <div class="swiper-wrapper">
+          <article class="testimonial swiper-slide">
+            <div class="avatar">
+              <img src="assets/img/avatar2.jpg" alt="">
+            </div>
+            <div class="testimonial__info">
+              <h5>Bento</h5>
+              <small>Cliente</small>
+            </div>
+            <div class="testimonial__body">
+              <p>
+               Com a BACKTRACK pude realizar meu sonho que sempre tive desde criança que era poder tocar bateria, contando sempre com o apoio de todos da equipe pude usufruir dos melhores instrumentos e estúdios!
+              </p>
+            </div>
+          </article>
+
+          <article class="testimonial swiper-slide">
+            <div class="avatar">
+              <img src="assets/img/avatar3.jpg" alt="">
+            </div>
+            <div class="testimonial__info">
+              <h5>Maycon</h5>
+              <small>Cliente</small>
+            </div>
+            <div class="testimonial__body">
+              <p>
+                Eu como amante de música não pensei duas vezes em escolher a BACKTRACK para a gravação de meu novo álbum musical, profissionais muito dedicados e sempre atenciosos com todos!
+              </p>
+            </div>
+          </article>
+
+          <article class="testimonial swiper-slide">
+            <div class="avatar">
+              <img src="assets/img/avatar2.jpg" alt="">
+            </div>
+            <div class="testimonial__info">
+              <h5>Sílvio</h5>
+              <small>Cliente</small>
+            </div>
+            <div class="testimonial__body">
+              <p>
+                Sou suspeito de falar, pois estou com a BACKTRACK à um bom tempo já e posso afirmar que sim, hoje eles são referência no quesito de estúdios e cursos musicais, dedicação da equipe é extraordinária!
+              </p>
+            </div>
+          </article>
+
+          <article class="testimonial swiper-slide">
+            <div class="avatar">
+              <img src="assets/img/avatar6.jpg" alt="">
+            </div>
+            <div class="testimonial__info">
+              <h5>Priscilla</h5>
+              <small>Cliente</small>
+            </div>
+            <div class="testimonial__body">
+              <p>
+                 Minha banda sempre procurava estúdios que tivessem profissionais de qualidade e também ambientes com instrumentos adequados para nossos ensaios, foi então que encontramos a BACKTRACK!
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-pagination"></div>
+      </section>
+      <!-- =========== END OF TESTIMONIALS ========== -->
+      <footer>
+        <div class="container footer__container">
+          <div class="footer__1">
+            <a href="/inicio" class="footer__logo"><h4>BACKTRACK</h4></a>
+            <p>
+              A sua melhor experiência musical!
+            </p>
+          </div>
+
+          <div class="footer__2">
+            <h4>Links</h4>
+            <ul class="permalinks">
+              <li><a href="/inicio">Início</a></li>
+              <li><a href="/sobre">Sobre</a></li>
+              <li><a href="/cursos">Cursos</a></li>
+              <li><a href="/contato">Contato</a></li>
+              <li><a href="/login">Login</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__3">
+            <h4>Termos</h4>
+            <ul class="permalinks">
+              <li><a href="/contato">Privacidade</a></li>
+              <li><a href="/contato">Termos e condições</a></li>
+              <li><a href="/contato">Politica de reembolso</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__4">
+            <h4>Contate-nos</h4>
+            <div>
+              <ul class="permalinks">
+              <li><a href="mailto:backtrack@gmail.com?subject=BACKTRACK%20-%20Contato">backtrack@gmail.com</a></li>
+              <li><a href="tel:+55 (41) 3333-4444">+55 (41) 3333-4444</a></li>
+              <li><a href="tel:+55 (41) 9999-9999">+55 (41) 9999-9999</a></li>
+            </ul>
+            </div>
+
+            <ul class="footer__socials">
+              <li>
+                <a href="https://facebook.com" target="_blank"><i class="uil uil-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram-alt"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter"></i></a>
+              </li>
+              <li>
+                <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__copyright">
+          <small>Copyright &copy; BACKTRACK @alunos_ads_unicesumar</small>
+        </div>
+      </footer>
+      <!-- =========== END OF FOOTER ========== -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        },  
+
+        slidesPerView: 1,
+        spaceBetween: 30,
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // When window width is >= 600px
+        breakpoints: {
+          600: {
+            slidesPerView: 2,
+          }
+        }
+      });
+  </script>
+</body>
+</html>

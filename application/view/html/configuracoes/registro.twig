@@ -1,0 +1,32 @@
+<h1>Painel de Controle</h1>
+<div class="recent-orders">
+    <div class="pagina1">
+        <h2>Registro de Auditoria</h2>
+        <h3></h3>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID - Registro</th>
+                <th>ID - Tabela</th>
+                <th>ID - Admin</th>
+                <th>Ação</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr>
+                <td>{{log.id_registro}}</td>
+                <td>{{log.id_registro_tabela}}</td>
+                <td>{{log.id_registro_admin}}</td>
+                <td>{{log.acao_registro}}</td>
+                <td>{{log.data_registro}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagina">
+        <h3><span class="material-icons-sharp" id="voltar"></span>     <span class="material-icons-sharp" id="proximo"></span></h3>
+    </div>
+</div>

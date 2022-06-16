@@ -1,0 +1,79 @@
+body {
+    background-color: #f6f6f9;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin-top: 0;
+}
+img {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+.container {
+    background-image: url("assets/img/bg-texture.png");
+    width: 400px;
+    background: #0a0d38c0;
+    border-radius: 20%;
+    box-shadow: 1px 2px 20px rgb(51, 31, 31);
+    padding: 50px;
+    transition: 300ms all ease;
+    grid-template-columns: none;
+}
+
+.container:hover {
+    box-shadow: 1px 2px 20px  rgb(107, 107, 107);
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+    color: white;
+    font-size: 40px;
+}
+
+p {
+    text-align: center;
+    margin: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    border-color: white !important;
+    color: white !important;
+    background-color: white;
+}
+
+button:hover {
+    background-color: rgb(50, 70, 82) !important;
+}
+
+label {
+    text-align: center !important;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 50px !important;
+}
+
+input {
+    width: 100%;
+    height: 46px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}

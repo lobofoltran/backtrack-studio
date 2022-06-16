@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backtrack Studio - Login</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+</head>
+<body>
+    <img src="assets/img/logo.png" alt="" href="/inicio">
+    <div class="container">
+        <main>
+            <h2>Login</h2>
+                <form action="/login/logar" method="POST">
+                <div class="input-field">
+                    <label for="nome">CPF</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF" required>
+                </div>
+                <div class="input-field">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                </div>
+                <div class="center">
+                <button>Entrar</button>
+            </div>
+        </form>
+        <div class="links-uteis">
+            <a href="/inicio">
+                <p>Voltar para o início</p>
+            </a>
+        </div>
+
+        </main>
+    </div>
+    <script src="/assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<h1>Painel de Controle</h1>
+<div class="recent-orders">
+    <div class="pagina1">
+        <h2>Clientes Cadastrados</h2>
+        <h3></h3>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th class="cel-no">RG</th>
+                <th>CPF</th>
+                <th class="cel-no">Bairro</th>
+                <th class="cel-no">Cidade</th>
+                <th class="cel-no">UF</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cliente in clientes %}
+            <tr>
+                <td class=""><a class="primary" href="/cliente/form?op=visual&id={{cliente.id_cliente}}">Visual</a></td>
+                <td>{{cliente.id_cliente}}</td>
+                <td>{{cliente.nome}}</td>
+                {% if cliente.admin == 0 %}
+                <td>Admin</td>
+                {% elseif cliente.admin == 1 %}
+                <td>Usuário</td>
+                {% endif %}
+                <td class="cel-no">{{cliente.rg}}</td>
+                <td>{{cliente.cpf}}</td>
+                <td class="cel-no">{{cliente.bairro}}</td>
+                <td class="cel-no">{{cliente.cidade}}</td>
+                <td class="cel-no">{{cliente.uf}}</td>
+                <td class=""><a class="warning" href="/cliente/form?op=altera&id={{cliente.id_cliente}}">Alterar</a></td>
+                <td class=""><a class="danger" href="/cliente/recebePost?op=deleta&id={{cliente.id_cliente}}" onclick="return confirm('Tem certeza deseja excluir? Essa operação é irreversível')">Excluir</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagina">
+        <h3><span class="material-icons-sharp" id="voltar"></span>     <span class="material-icons-sharp" id="proximo"></span></h3>
+    </div>
+    <a href="/cliente/form?op=inclui" class="link">
+        <div class="cadastrar">Cadastrar novo cliente</div>
+    </a>
+</div>

@@ -1,0 +1,32 @@
+<h1>Painel de Controle</h1>
+<form action="/sala/recebePost?op={{op}}" method="POST">
+    {% if op == 'inclui' %}
+    <h2>Cadastro de Sala</h2>
+    {% elseif op == 'altera' %}
+    <h2>Edição de Sala</h2>
+    {% else %}
+    <h2>Visualização de Sala</h2>
+    {% endif %}
+    <div class="inputs">
+        {% if op != 'inclui' %}
+        <p>ID:</p>
+        <input type="text" placeholder="Número da sala" name="id_sala" value="{{sala.id_sala}}" readonly required>
+        {% endif %}
+        <p>Insira o horário:</p>
+        <input type="time" placeholder="Horário" id="horario_disp1" name="horario_disp1" value="{{sala.horario_disp1}}" required>
+        <p>Insira outro horário:</p>
+        <input type="time" placeholder="Horário" id="horario_disp2" name="horario_disp2" value="{{sala.horario_disp2}}" required>
+        <p>Insira outro horário:</p>
+        <input type="time" placeholder="Horário" id="horario_disp3" name="horario_disp3" value="{{sala.horario_disp3}}" required>
+        <p>Valor por Ensaio:</p>
+        <input type="text" placeholder="Valor por Ensaio" name="valor_ensaio" id="valor_ensaio" value="{{sala.valor_ensaio}}" required>
+        <p>Valor por Gravação:</p>
+        <input type="text" placeholder="Valor por Gravação" name="valor_gravacao" id="valor_gravacao" value="{{sala.valor_gravacao}}" required>
+    </div>
+    {% if op == 'altera' %}
+    <a id="excluirCliente" class="danger" href="/cliente/recebePost?op=deleta&id={{cliente.id_cliente}}" onclick="return confirm('Tem certeza deseja excluir? Essa operação é irreversível')">Excluir Sala</a>
+    {% endif %}
+    {% if op != 'visual' %}
+    <button type="submit">Confirmar</button>
+    {% endif %}
+</form>

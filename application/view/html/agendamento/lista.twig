@@ -1,0 +1,48 @@
+<h1 class="usuarios">Painel de Controle</h1>
+<div class="recent-orders">
+    <div class="pagina1">
+        <h2>Agendamentos</h2>
+        <h3></h3>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>ID</th>
+                {# <th class="cel-no">Nome Cliente</th> #}
+                <th>Sala</th>
+                <th>Data</th>
+                <th>Horário</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                <th class="cel-no">Forma Pag.</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in agendamentos %}
+            <tr>
+                <td><a class="primary" href="/agendamento/form?op=visual&id={{a.id_agenda}}">Visual</a></td>
+                <td>{{a.id_agenda}}</td>
+                {# <td>{{a.nome}}</td> #}
+                <td>{{a.id_sala}}</td>
+                <td>{{a.data}}</td>
+                <td>{{a.horario}}</td>
+                <td>{{a.tipo}}</td>
+                <td>R$ {{a.valor}},00</td>
+                <td class="cel-no">{{a.forma_pag}}</td>
+                <td><a class="warning" href="/agendamento/form?op=altera&id={{a.id_agenda}}">Alterar</a></td>
+                <td><a class="danger" href="/agendamento/recebePost?op=deleta&id={{a.id_agenda}}" onclick="return confirm('Tem certeza deseja excluir? Essa operação é irreversível')">Excluir</a></td>
+            </tr>
+            {% else %}
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagina">
+        <h3><span class="material-icons-sharp" id="voltar"></span>     <span class="material-icons-sharp" id="proximo"></span></h3>
+    </div>
+    <a href="/agendamento/form?op=inclui" class="link">
+        <div class="cadastrar">Novo agendamento</div>
+    </a>
+</div>

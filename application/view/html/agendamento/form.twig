@@ -1,0 +1,52 @@
+<h1>Painel de Controle</h1>
+<form action="/agendamento/recebePost?op={{op}}" method="POST">
+    {% if op == 'inclui' %}
+    <h2>Cadastro de Agendamento</h2>
+    {% elseif op == 'altera' %}
+    <h2>Edição de Agendamento</h2>
+    {% else %}
+    <h2>Visualização de Agendamento</h2>
+    {% endif %}
+    <div class="inputs">
+        {% if op != 'inclui' %}
+        <p>ID:</p>
+        <input type="text" placeholder="ID" name="id_agenda" id="id_agenda" value="{{agenda.id_agenda}}" readonly>
+        {% endif %}
+        <p>Cliente:</p>
+        <select id="nome" placeholder="Cliente" name="id_cliente" class="{{agenda.id_cliente}}" required>
+            <option value="" selected disabled>Selecione</option>
+            {% for c in clientes %}
+            <option value="{{c.id_cliente}}">{{c.nome}}</option>
+            {% endfor %}
+        </select>
+        <p>Sala:</p>
+        <select id="id_sala" placeholder="Sala" name="id_sala" class="{{agenda.id_sala}}" onchange="valorAgendamento()" required>
+            <option value="" selected disabled>Selecione</option>
+            {% for s in salas %}
+            <option value="{{s.id_sala}}">{{s.id_sala}}</option>
+            {% endfor %}
+        </select>
+        <p>Data:</p>
+        <input type="date" placeholder="Data" name="dataagend" value="{{agenda.data}}" required>
+        <p>Horário:</p>
+        <input type="text" placeholder="Horário" id="horarioagend" name="horarioagend" value="{{agenda.horario}}" required>
+        <p>Tipo:</p>
+        <select placeholder="Tipo" name="tipoagend" id="tipo" onchange="valorAgendamento()" class="{{agenda.tipo}}" value="{{agenda.tipo}}" required>
+            <option value="" selected disabled>Selecione</option>
+            <option value="Ensaio">Ensaio</option>
+            <option value="Gravação">Gravação</option>
+        </select>    
+        <p>Valor (R$):</p>
+        <input type="text" placeholder="Valor" name="valoragend" id="valor" value="{{agenda.valor}}">
+        <p>Formas de pagamento:</p>
+        <input type="text" placeholder="Formas de pagamento" name="formapag" id="valor" value="{{agenda.forma_pag}}" required>
+    </div>
+    {% if op == 'altera' %}
+    <a id="excluirCliente" class="danger" href="/cliente/recebePost?op=deleta&id={{cliente.id_cliente}}" onclick="return confirm('Tem certeza deseja excluir? Essa operação é irreversível')">Excluir Agendamento</a>
+    {% endif %}
+    {% if op != 'visual' %}
+    <button type="submit">Confirmar</button>
+    {% endif %}
+</form>
+
+<script src="/assets/js/dashboard-agendamentos.js"></script>

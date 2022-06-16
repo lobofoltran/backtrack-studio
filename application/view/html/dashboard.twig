@@ -1,0 +1,91 @@
+<h1>Painel de Controle</h1>
+<div class="insights">
+    <div class="sales">
+        <span class="material-icons-sharp">savings</span>
+        <div class="middle">
+            <div class="left">
+                <h3>Total Ganho</h3>
+                <h1 id="total_ganhos" class="{{valorGanho}}">R$ {{valorGanho}},00</h1>
+            </div>
+            <div class="progress" id="cont" data-pct="40">
+                <svg id="svg"  version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx='38' cy='38' r='36' fill="transparent" stroke-dasharray="225.5" stroke-dashoffset="0"></circle>
+                    <circle id="bar" cx='38' cy='38' r='36' fill="transparent" stroke-dasharray="225.5" stroke-dashoffset="0"></circle>
+                </svg>
+                <div class="number">
+                    <p id="meta_ganhos" class="{{meta_ganho}}" value="{{meta_ganho}}"></p>
+                </div>
+            </div>
+        </div>
+        <small class="text-muted">Último mês</small>
+    </div>
+    <div class="sales">
+        <span class="material-icons-sharp">event_note</span>
+        <div class="middle">
+            <div class="left">
+                <h3>Total de Agendamentos</h3>
+                <h1 id="total_agend" class="{{totalAgendamentos}}">{{totalAgendamentos}}</h1>
+            </div>
+            <div class="progress">
+                <svg id="svg1" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx='38' cy='38' r='36' fill="transparent" stroke-dasharray="225.5" stroke-dashoffset="0"></circle>
+                    <circle id="bar1" cx='38' cy='38' r='36' fill="transparent" stroke-dasharray="225.5" stroke-dashoffset="0"></circle>
+                </svg>
+                <div class="number">
+                    <p id="meta_agenda" class="{{meta_agenda}}">{{meta_agenda}}</p>
+                </div>
+            </div>
+        </div>
+        <small class="text-muted">Último mês</small>
+    </div>
+    <div class="sales">
+        <span class="material-icons-sharp">person</span>
+        <div class="middle">
+            <div class="left">
+                <h3>Total de Clientes</h3>
+                <h1 id="total_clientes" class="{{totalClientes}}">{{totalClientes}}</h1>
+            </div>
+            <div class="progress">
+                <svg id="svg2"  version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx='38' cy='38' r='36' fill="transparent" stroke-dasharray="225.5" stroke-dashoffset="0"></circle>
+                    <circle id="bar2" cx='38' cy='38' r='36' fill="transparent" stroke-dasharray="225.5" stroke-dashoffset="0"></circle>
+                </svg>
+                <div class="number">
+                    <p id="meta_clientes" class="{{meta_clientes}}">{{meta_clientes}}</p>
+                </div>
+            </div>
+        </div>
+        <small class="text-muted">Último mês</small>
+    </div>
+</div>
+
+<div class="recent-orders" id="ultimos-agendamentos">
+    <h2>Últimos Agendamentos</h2>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Nome Cliente</th>
+                <th>N° Sala</th>
+                <th>Data</th>
+                <th>Horário</th>
+                <th>Valor</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in agendamentos %}
+            <tr>
+                <td>{{a.nome}}</td>
+                <td>{{a.id_sala}}</td>
+                <td>{{a.data}}</td>
+                <td>{{a.horario}}</td>
+                <td>R$ {{a.valor}},00</td>
+                <td><a class="primary" href="/agendamento/form?op=visual&id={{a.id_agenda}}">Detalhes</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/agendamento" class="showall">Mostrar tudo</a>
+</div>
+
+<script src="/assets/js/dashboard-meta.js"></script>

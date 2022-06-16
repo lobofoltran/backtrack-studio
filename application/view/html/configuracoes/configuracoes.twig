@@ -1,0 +1,27 @@
+<h1>Painel de Controle</h1>
+<form action="/configuracoes/recebeProfileFoto" method="POST">
+    <h2>Foto de perfil</h2>
+    <div class="inputs">
+        <p>Nova foto de perfil:</p>
+        <input type="file" placeholder="Foto" name="foto" required>
+    </div>
+    <button type="submit">Confirmar</button>
+</form>
+<form action="/configuracoes/recebePost?op=meta" method="POST">
+    <h2>Metas</h2>
+    {% for m in meta %}
+    <div class="inputs">
+        <p>Meta de ganhos (mensal):</p>
+        <input type="text" placeholder="Meta de Ganhos" name="meta_ganhos" value="{{m.meta_ganhos}}" required>
+        <p>Meta de Agendamentos (mensal):</p>
+        <input type="text" placeholder="Meta de Agendamentos" name="meta_agend" value="{{m.meta_agend}}" required>
+        <p>Meta de novos Clientes (mensal):</p>
+        <input type="text" placeholder="Meta de novos Clientes" name="meta_cliente" value="{{m.meta_cliente}}" required>
+    </div>
+    <button type="submit">Confirmar</button>
+    {% endfor %}
+</form>
+<form action="/configuracoes/registros">
+    <h2>Registro de Auditoria</h2>
+    <button type="submit">Ver</button>
+</form>
